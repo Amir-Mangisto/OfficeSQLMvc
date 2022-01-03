@@ -215,7 +215,7 @@ namespace OfficeSQLMvc
                     SqlCommand cmd = new SqlCommand (managerQuery, connection);
                     int infoDB=cmd.ExecuteNonQuery();
                     Console.WriteLine(infoDB);
-
+                    connection.Close();
                 }
                 catch(SqlException ex)
                 {
